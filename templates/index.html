@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mark Attendance</h1>
+        <p>Point your webcam at your face and click "Capture & Mark".</p>
+        
+        <video id="video" width="320" height="240" autoplay></video>
+        <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+        
+        <button id="captureBtn">Capture & Mark Attendance</button>
+        <p id="status"></p>
+        
+        <div class="nav">
+            <a href="/register">Register New User</a>
+            <a href="/view">View Attendance</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

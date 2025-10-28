@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Register New User (Admin)</h1>
+        <p>Upload a photo of the user's face.</p>
+        
+        <input type="file" id="imageInput" accept="image/*">
+        <input type="text" id="nameInput" placeholder="Enter user name">
+        <button id="registerBtn">Register</button>
+        <p id="regStatus"></p>
+        
+        <div class="nav">
+            <a href="/">Mark Attendance</a>
+            <a href="/view">View Attendance</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
